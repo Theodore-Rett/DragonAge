@@ -1,28 +1,19 @@
+import DragonAgeState.Age;
+import DragonAgeState.Hatchling;
+import DragonColourState.*;
+
 public class Dragon {
 
-    private int count;
+    private double age;
+    private Age ageState;
+    private final Colour colour;
 
     public Dragon(){
-        count = 1;
+        this.age = 0;
+        this.ageState = new Hatchling();
+        this.colour = new Red();
     }
 
-    public void addNew(){
-        count++;
-    }
 
-    public void addNew(int n){
-        count += n;
-    }
 
-    public void remove(){
-        count--;
-    }
-
-    public void remove(int n){
-        count -= n;
-    }
-
-    public int getCount(){
-        return count;
-    }
 }
